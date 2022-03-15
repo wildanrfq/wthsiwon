@@ -8,4 +8,4 @@ Make sure you have Ruby installed.
 1. `gem install nokogiri`
 2. `ruby netflix.rb`
 
-![Running the program](https://cdn.discordapp.com/attachments/900443909677797396/953202099552927744/34aJvh3Mji.gif)
+![Running the program](https://cdn.discordapp.com/attachments/900443909677797396/953204123128455198/MwZ9DHkhyB.gif)
