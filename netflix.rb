@@ -3,6 +3,11 @@
 require "open-uri"
 require "nokogiri"
 
+def restart()
+    puts "There's an unexpected error while parsing the information.  Restarting the program..." # can't be handled due to inconsistent data structure, sorry
+    exec("ruby #{__FILE__}")
+end
+
 NUMS = (1..170).to_a
 NUMS.delete(166)
 
@@ -23,8 +28,7 @@ if info.length == 1
     synopsis = info.first
 
     if !synopsis
-        puts "There's an unexpected error while parsing the information. Trying again..." # can't be handled due to inconsistent data structure, sorry
-        exec("ruby #{__FILE__}")
+        restart()
     end
 
     synopsis = synopsis.content.split("[")[0].gsub "\n", ""
@@ -33,8 +37,7 @@ else
     synopsis = info.first
 
     if !synopsis
-        puts "There's an unexpected error while parsing the information. Trying again..." # can't be handled due to inconsistent data structure, sorry
-        exec("ruby #{__FILE__}")
+        restart()
     end
 
     synopsis = synopsis.content.split("[")[0].gsub "\n", ""
@@ -42,8 +45,7 @@ else
 end
 
 if !info.last
-    puts "There's an unexpected error while parsing the information. Trying again..." # can't be handled due to inconsistent data structure, sorry
-    exec("ruby #{__FILE__}")
+    restart()
 end
 
 if info.last.content.start_with?("Or")
