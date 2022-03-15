@@ -1,6 +1,6 @@
 # wthsiwon
 
-Generates random film/series/show information from WHAT THE HELL SHOULD I WATCH ON NETFLIX? (http://whatthehellshouldiwatchonnetflix.com).
+Generates a random Netflix film/series/show information from http://whatthehellshouldiwatchonnetflix.com.
 
 # Installation & running the program
 
